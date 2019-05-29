@@ -96,16 +96,21 @@ export interface MUIDataTableTextLabels {
     selectedRows: MUIDataTableTextLabelsSelectedRows;
 }
 
+
+export type MUIDataTableFilterType =  'dropdown' | 'checkbox' | 'multiselect' | 'textField';
+export type MUIDataTableDisplay = 'true' | 'false' | 'excluded';
+export type MUIDataTableSortDirection = 'asc' | 'desc';
+
 export interface MUIDataTableColumnOptions {
-    display?: 'true' | 'false' | 'excluded';
+    display?: MUIDataTableDisplay;
     empty?: boolean;
     filter?: boolean;
     filterList?: string[];
     filterOptions?: string[];
-    filterType?: 'dropdown' | 'checkbox' | 'multiselect' | 'textField';
+    filterType?: MUIDataTableFilterType;
     sort?: boolean;
     searchable?: boolean;
-    sortDirection?: 'asc' | 'desc';
+    sortDirection?: MUIDataTableSortDirection;
     print?: boolean;
     download?: boolean;
     hint?: string;
